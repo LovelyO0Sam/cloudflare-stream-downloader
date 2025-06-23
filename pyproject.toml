@@ -1,0 +1,31 @@
+[project]
+name = "cloudflare-stream-downloader"
+version = "0.1.0"
+authors = [
+  { name="LovelyO0Sam", email="lovelysam2333@outlook.com" },
+]
+description = "A Python tool to download Cloudflare Stream videos with automatic FFmpeg management."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Utilities",
+]
+dependencies = [                       
+    "requests",
+]
+
+[project.urls]
+Homepage = "https://github.com/LovelyO0Sam/cloudflare-stream-downloader"
+"Bug Tracker" = "https://github.com/LovelyO0Sam/cloudflare-stream-downloader/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# Entry points for command line execution
+[project.scripts]
+cloudflare-stream-downloader = "cloudflare_stream_downloader.main:main"
