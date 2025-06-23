@@ -97,7 +97,7 @@ MESSAGES = {
 }
 
 # Default language
-current_language = 'zh'
+current_language = 'en'
 
 def get_text(key, *args):
     """Retrieves text in the current language, with optional formatting."""
