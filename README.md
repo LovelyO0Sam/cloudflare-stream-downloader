@@ -1,54 +1,55 @@
-Cloudflare Stream 视频下载工具
-一个简单易用的 Python 脚本，用于从 Cloudflare Stream 下载视频。该工具能够自动检查并尝试安装 FFmpeg (Windows 和 Linux)，然后将 Cloudflare Stream 的视频链接转换为可下载的 .mp4 文件。
+Cloudflare Stream Video Downloader
+A simple and easy-to-use Python script for downloading videos from Cloudflare Stream. This tool automatically checks for and attempts to install FFmpeg (on Windows and Linux), then converts Cloudflare Stream video links into downloadable .mp4 files.
 
-✨ 功能
-自动 FFmpeg 管理: 自动检测系统是否安装了 FFmpeg，并在 Windows 和主流 Linux 发行版上尝试自动下载和安装。
+✨ Features
+Automatic FFmpeg Management: Automatically detects if FFmpeg is installed on the system and attempts to download and install it on Windows and major Linux distributions.
 
-Cloudflare Stream URL 转换: 将 thumbnails/thumbnail.jpg 格式的 Cloudflare Stream URL 转换为可供 FFmpeg 下载的 manifest/video.m3u8 格式。
+Cloudflare Stream URL Conversion: Converts Cloudflare Stream URLs in thumbnails/thumbnail.jpg format to manifest/video.m3u8 format, which is suitable for FFmpeg download.
 
-视频下载: 使用 FFmpeg 进行视频下载，并将视频保存为 .mp4 格式。
+Video Download: Uses FFmpeg to download videos and saves them in .mp4 format.
 
-下载进度显示: 在下载过程中实时显示 FFmpeg 的进度输出。
+Download Progress Display: Shows real-time FFmpeg progress output during the download.
 
-🚀 如何使用
-先决条件
+🚀 How to Use
+Prerequisites
 Python 3.x
 
-FFmpeg (工具会尝试自动为您安装，如果失败，您可能需要手动安装)
+FFmpeg (The tool will attempt to install it for you automatically; if it fails, you may need to install it manually)
 
-安装依赖
-您只需要安装 requests 库来处理 HTTP 请求：
+Install Dependencies
+You only need to install the requests library to handle HTTP requests:
+
 ``` python
 pip install requests
 ```
+Run the Script
 
-运行脚本
-
-``` bash
+``` bash 
 git clone https://github.com/LovelyO0sam/cloudflare-stream-downloader.git
 cd cloudflare-stream-downloader
 python cloudflare-stream-downloader.py
 ```
+Follow the prompts to enter the Cloudflare Stream video URL. Please ensure the URL contains thumbnails/thumbnail.jpg or manifest/video.m3u8.
 
-根据提示输入 Cloudflare Stream 视频的 URL。请确保 URL 包含 thumbnails/thumbnail.jpg 或 manifest/video.m3u8 字样。
-
-示例 URL 格式:
+Example URL Format:
 
 https://customer-XXXXX.cloudflarestream.com/YYYYYYYYYYYYYYYYYYYYYYYY/thumbnails/thumbnail.jpg
 
 https://customer-XXXXX.cloudflarestream.com/YYYYYYYYYYYYYYYYYYYYYYYY/manifest/video.m3u8
 
-输入您希望保存的视频文件名（无需扩展名，脚本会自动添加 .mp4）。
+Enter the desired output filename for the video (no extension needed; the script will automatically add .mp4).
 
-脚本将自动转换 URL 并开始下载。
+The script will automatically convert the URL and start the download.
 
-💻 支持的操作系统
-Windows: 支持自动下载和安装 FFmpeg。
+💻 Supported Operating Systems
+Windows: Supports automatic FFmpeg download and installation.
 
-Linux (Debian/Ubuntu, CentOS/RHEL/Fedora, Arch): 支持通过包管理器自动安装 FFmpeg。
+Linux (Debian/Ubuntu, CentOS/RHEL/Fedora, Arch): Supports automatic FFmpeg installation via package managers.
 
-macOS 及其他系统: 需要手动安装 FFmpeg (例如，macOS 用户可以使用 Homebrew: brew install ffmpeg)。
+macOS and other systems: Requires manual FFmpeg installation (e.g., macOS users can use Homebrew: brew install ffmpeg).
 
-欢迎任何形式的贡献！如果您有改进建议、发现了 Bug 或想添加新功能，请随时提交 Issue 或 Pull Request。
+🤝 Contributing
+Contributions of any kind are welcome! If you have suggestions for improvement, found a bug, or want to add a new feature, feel free to submit an Issue or Pull Request.
 
-本项目采用 MIT 许可证。有关详细信息，请参阅 LICENSE 文件。
+📄 License
+This project is licensed under the MIT License. For more details, please see the LICENSE file.
